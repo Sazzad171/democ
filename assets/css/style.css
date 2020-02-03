@@ -408,12 +408,16 @@ button:hover {
   /* home */
   .hero-home .hero-container {
     width: 95%;
-    padding: 40% 0;
+    padding: 50% 0;
   }
   .hero-home .social-icon {
     display: none;
   }
-  .hero-home h1, .popular-res-home .headline, 
+   .hero-home h1 {
+    font-size: 35px;
+    margin-left: 1rem;
+   }
+  .popular-res-home .headline, 
   .popular-food-home .headline {
   font-size: 30px;
   text-align: center;
@@ -422,7 +426,8 @@ button:hover {
     padding: 10px;
   }
   .hero-home button {
-    padding: 5px 15px;
+    padding: 7px 21px;
+    top: 6px;
   }
   .footer .footer-container {
     width: 85%;
@@ -434,6 +439,13 @@ button:hover {
   .footer .footer-bottom, 
   .footer .footer-bottom .social-icon {
     text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-home h1 {
+    font-size: 30px;
+    margin-left: 0;
   }
 }
 /* custom responsive end */
