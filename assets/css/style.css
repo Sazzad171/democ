@@ -406,6 +406,9 @@ button:hover {
 
 @media (max-width: 575px) {
   /* home */
+  .hero-home {
+    height: auto;
+  }
   .hero-home .hero-container {
     width: 95%;
     padding: 50% 0;
@@ -444,9 +447,6 @@ button:hover {
 
 @media (max-width: 360px) {
   /* home */
-  .hero-home {
-    height: 110vh;
-  }
   .hero-home .hero-container {
     padding: 40% 0;
   }
