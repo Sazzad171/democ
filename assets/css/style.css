@@ -443,6 +443,13 @@ button:hover {
 }
 
 @media (max-width: 360px) {
+  /* home */
+  .hero-home {
+    height: 110vh;
+  }
+  .hero-home .hero-container {
+    padding: 40% 0;
+  }
   .hero-home h1 {
     font-size: 30px;
     margin-left: 0;
