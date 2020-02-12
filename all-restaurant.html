@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ki-Kothai - Home</title>
+  <title>All Restaurant - Ki-Kothai</title>
   <link rel="shortcut icon" href="./assets/img/logo - favicon.png" type="image/x-icon">
   <!-- bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -18,12 +18,13 @@
 <body>
 
   <!-- navbar start -->
-  <section class="navigation-home fixed-top">
+  <section class="navigation-with-search fixed-top">
     <div class="nav-container">
       <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="./index.html">
           <img src="./assets/img/logo.png" alt="logo">
         </a>
+        <a class="navbar-toggler show-on-sml" onclick="showSearch()"> <i class="fas fa-search"></i> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
@@ -45,137 +46,157 @@
             <li class="nav-item">
               <a class="nav-link" href="#">About us</a>
             </li>
+            <li class="nav-item hide-on-sml">
+              <a class="nav-link" onclick="showSearch()"> <i class="fas fa-search"></i> </a>
+            </li>
           </ul>
         </div>
       </nav>
+    </div>
+
+    <div class="hidden-search-bar" id="hidden-search-bar">
+      <div class="nav-container">
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" autofocus>
+          <div class="input-group-append">
+            <span class="input-group-text cross-btn" onclick="hideSearch()"> <i class="far fa-times-circle"></i> </span>
+            <span class="input-group-text srch-btn"> <i class="fas fa-search"></i> </span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- navbar end -->
  
   <!-- hero start -->
-  <section class="hero-home">
-    <div class="hero-container">
-      <h1>Find your nearby<br>restaurant or food<br>with best offer !</h1>
-      <div class="search-box">
-        <input id="placeholder-text-change" type="text" name="" id="" placeholder="Search foods, restaurants or places" autofocus>
-        <button>Search here</button>
-      </div>
-    </div>
-    <div class="social-icon">
-      <ul>
-        <li>
-            <a href="#">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </i>
-        </li>
-        <li>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </i>
-        </li>
-        <li>
-            <a href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </i>
-        </li>
-      </ul>
-    </div>
+  <section class="hero-all-restaurant">
+    
   </section>
   <!-- hero end -->
 
-  <!-- popular restaurant start -->
-  <section class="popular-res-home">
-    <div class="popular-res-full">
-      <h1 class="headline">Popular Restaurants</h1>
-      <div class="popular-res-container">
+  <!-- headline start -->
+  <h2 class="all-restaurant-heading"> <span>All Restaurants in Cumilla</span> </h2>
+  <!-- headline end -->
+
+  <!-- menu start -->
+  <section class="menu-all-restaurant">
+    <div class="menu-full">
+      <div class="menu-container">
 
         <div class="row">
-          <div class="col-sm-6 item-each">
-            <a href="./single-restaurant.html">
+          <div class="col-sm-4 item-each">
+            <a href="#">
               <img class="img-fluid" src="./assets/img/food-img1.png" alt="">
               <div class="title">
-                <div class="title-left">
-                  <h4>Grandiose Restaurant</h4>
+                <h5 class="name">Grandiose Restaurant</h5>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Dhanmondi</span>
                 </div>
-                <div class="title-right">
+                <div class="review-icon">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                </div>
-                <div class="location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Dhanmondi</span>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-sm-6 item-each">
+          <div class="col-sm-4 item-each">
             <a href="#">
               <img class="img-fluid" src="./assets/img/food-img-2.jpg" alt="">
               <div class="title">
-                <div class="title-left">
-                  <h4>Grandiose Restaurant</h4>
+                <h5 class="name">Grandiose Restaurant</h5>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Dhanmondi</span>
                 </div>
-                <div class="title-right">
+                <div class="review-icon">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4 item-each">
+            <a href="#">
+              <img class="img-fluid" src="./assets/img/food-img1.png" alt="">
+              <div class="title">
+                <h5 class="name">Grandiose Restaurant</h5>
                 <div class="location">
                   <i class="fas fa-map-marker-alt"></i>
                   <span>Dhanmondi</span>
+                </div>
+                <div class="review-icon">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
             </a>
           </div>
         </div>
-  
+
         <div class="row">
-          <div class="col-sm-6 item-each">
+          <div class="col-sm-4 item-each">
             <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img-2.jpg" alt="">
+              <img class="img-fluid" src="./assets/img/food-img1.png" alt="">
               <div class="title">
-                <div class="title-left">
-                  <h4>Grandiose Restaurant</h4>
+                <h5 class="name">Grandiose Restaurant</h5>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Dhanmondi</span>
                 </div>
-                <div class="title-right">
+                <div class="review-icon">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                </div>
-                <div class="location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Dhanmondi</span>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-sm-6 item-each">
+          <div class="col-sm-4 item-each">
             <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img1.png" alt="">
+              <img class="img-fluid" src="./assets/img/food-img-2.jpg" alt="">
               <div class="title">
-                <div class="title-left">
-                  <h4>Grandiose Restaurant</h4>
+                <h5 class="name">Grandiose Restaurant</h5>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Dhanmondi</span>
                 </div>
-                <div class="title-right">
+                <div class="review-icon">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4 item-each">
+            <a href="#">
+              <img class="img-fluid" src="./assets/img/food-img1.png" alt="">
+              <div class="title">
+                <h5 class="name">Grandiose Restaurant</h5>
                 <div class="location">
                   <i class="fas fa-map-marker-alt"></i>
                   <span>Dhanmondi</span>
+                </div>
+                <div class="review-icon">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
             </a>
@@ -183,132 +204,18 @@
         </div>
       </div>
     </div>
-    <div class="text-center">
-      <button class="see-more-btn">See more</button>
-    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#">Page</a>
+        </li>
+        <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+      </ul>
+    </nav>
   </section>
-  <!-- popular restaurant end -->
-
-  <!-- popular food start -->
-  <section class="popular-food-home">
-    <div class="popular-food-full">
-      <h1 class="headline">Popular Foods</h1>
-      <div class="popular-food-container">
-
-        <div class="row">
-          <div class="col-sm-4 item-each">
-            <a href="./single-food.html">
-              <img class="img-fluid" src="./assets/img/food-img-3.jpg" alt="">
-              <div class="title">
-                <h5 class="name">Sushi with salad</h5>
-                <p class="price">BDT 290</p>
-                <div class="review-icon">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <p class="res-avl">Available on <span>Grandiose restaurant</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-4 item-each">
-            <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img-4.jpg" alt="">
-              <div class="title">
-                <h5 class="name">Sushi with salad</h5>
-                <p class="price">BDT 290</p>
-                <div class="review-icon">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <p class="res-avl">Available on <span>Grandiose restaurant</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-4 item-each">
-            <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img-3.jpg" alt="">
-              <div class="title">
-                <h5 class="name">Sushi with salad</h5>
-                <p class="price">BDT 290</p>
-                <div class="review-icon">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <p class="res-avl">Available on <span>Grandiose restaurant</span></p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-4 item-each">
-            <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img-3.jpg" alt="">
-              <div class="title">
-                <h5 class="name">Sushi with salad</h5>
-                <p class="price">BDT 290</p>
-                <div class="review-icon">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <p class="res-avl">Available on <span>Grandiose restaurant</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-4 item-each">
-            <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img-4.jpg" alt="">
-              <div class="title">
-                <h5 class="name">Sushi with salad</h5>
-                <p class="price">BDT 290</p>
-                <div class="review-icon">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <p class="res-avl">Available on <span>Grandiose restaurant</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-4 item-each">
-            <a href="#">
-              <img class="img-fluid" src="./assets/img/food-img-3.jpg" alt="">
-              <div class="title">
-                <h5 class="name">Sushi with salad</h5>
-                <p class="price">BDT 290</p>
-                <div class="review-icon">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <p class="res-avl">Available on <span>Grandiose restaurant</span></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center">
-      <button class="see-more-btn">See more</button>
-    </div>
-  </section>
-  <!-- popular food end -->
+  <!-- menu end -->
   
   <!-- footer start -->
   <section class="footer">
@@ -352,8 +259,11 @@
 
   <!-- custom js -->
   <script>
-    if ($(window).width() < 576) {
-      document.getElementById("placeholder-text-change").placeholder = "Search";
+    function showSearch() {
+      document.getElementById("hidden-search-bar").style.display = "block";
+    }
+    function hideSearch() {
+      document.getElementById("hidden-search-bar").style.display = "none";
     }
   </script>
 </body>
