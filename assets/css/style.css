@@ -151,6 +151,8 @@ a {
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
   transition: all .3s ease-in-out;
 }
 .popular-res-home .item-each:hover {
@@ -225,6 +227,8 @@ a {
   margin: 0 auto;
 }
 .popular-food-home .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -296,19 +300,22 @@ a {
 .footer a:hover {
   text-decoration: none;
 }
-.footer .about-link {
-  font-size: 20px;
-  font-weight: 400;
+.footer .footer-each h5 {
+  font-weight: 500;
+  margin-bottom: 12px;
 }
-.footer .all-link {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.footer .footer-each ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-each ul li {
+  padding: 2px 0;
 }
 .footer .social-icon {
-  text-align: right;
+  margin-bottom: 6px;
 }
 .footer .social-icon a {
-  margin: 0 1rem;
+  margin: 0 1.5rem 0 0;
 }
 .footer .social-icon i {
   font-size: 26px;
@@ -377,7 +384,7 @@ a {
   position: relative;
 }
 .hero-single-res .map-img {
-  width: 250px;
+  width: 300px;
   height: 250px;
   border-radius: 8px;
   position: absolute;
@@ -450,6 +457,8 @@ a {
   margin: 0 auto;
 }
 .menu-sngl-res .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -723,6 +732,7 @@ a {
 }
 .single-place-desc .black-clr-txt {
   color: #505050;
+  line-height: 30px;
 }
 /* single place end */
 
@@ -760,6 +770,8 @@ a {
   margin: 0 auto;
 }
 .menu-all-food .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -846,6 +858,8 @@ a {
   margin: 0 auto;
 }
 .menu-all-restaurant .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -915,6 +929,8 @@ a {
   margin: 0 auto;
 }
 .res-list-search .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -969,6 +985,8 @@ a {
   margin: 0 auto;
 }
 .food-list-search .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -1047,6 +1065,8 @@ a {
   margin: 0 auto;
 }
 .menu-all-place .item-each {
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
   padding: 8px;
   border-radius: 8px;
@@ -1095,6 +1115,79 @@ a {
   color: #1A237E;
 }
 /* all-place end */
+
+/* current offer start */
+/* hero current offer */
+.hero-current-offer {
+  background: url('../img/burger.png') center center;
+}
+
+.hero-current-offer .current-offer-heading {
+  text-align: center;
+  padding: 13rem 0 11rem;
+  font-size: 40px;
+  color: #fff;
+}
+.hero-current-offer .current-offer-heading span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  background: #0000007a;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 11px 0 rgba(0,0,0,.14);
+}
+
+/* offer item */
+.offer-item {
+  font-family: 'Roboto', sans-serif;
+}
+.offer-item .offer-item-container {
+  width: 70%;
+  margin: 0 auto;
+}
+.offer-item .row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  transition: .5s;
+  box-shadow: 0 2px 11px 0 rgba(0,0,0,.14);
+}
+.offer-item .row:hover {
+  transform: translateY(-5px);
+}
+.offer-item .img-part {
+  padding: 1rem 0;
+}
+.offer-item .img-part img {
+  border-radius: 8px;
+}
+.offer-item .desc-part {
+  padding: 2rem;
+}
+.offer-item .desc-part .food-name {
+  font-weight: 600;
+}
+.offer-item .desc-part .prev-price {
+  text-decoration: line-through;
+  font-weight: 500;
+  font-size: 14px;
+}
+.offer-item .desc-part .offer-price {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.offer-item .desc-part .offer-start,
+.offer-item .desc-part .offer-end {
+  margin-bottom: 2px;
+}
+.offer-item .desc-part .res-name span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.offer-item .desc-part .res-name a {
+  color: #1A237E;
+}
+/* current offer end */
 
 /* custom responsive start */
 @media (min-width: 1400px) {
@@ -1160,11 +1253,6 @@ a {
   .popular-food-home .headline {
     left: -6%;
   }
-  .footer .all-link .col-2 {
-    flex: 0 0 22%;
-    max-width: 22%;
-  }
-
 }
 
 @media (max-width: 991px) {
@@ -1195,9 +1283,8 @@ a {
     transform: rotate(0deg);
     text-align: center;
   }
-  .footer .all-link .col-2 {
-    flex: 0 0 30%;
-    max-width: 30%;
+  .footer .footer-container {
+    width: 90%;
   }
 
   /* single restaurant */
@@ -1251,6 +1338,11 @@ a {
   .menu-all-place .menu-container {
     width: 90%;
   }
+
+  /* offer */
+  .offer-item .offer-item-container {
+    width: 90%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1280,6 +1372,9 @@ a {
     display: none;
   }
   .navigation-with-search .show-on-sml {
+    position: absolute;
+    top: 12px;
+    right: 6%;
     display: block;
   }
   .hero-single-res .map-img {
@@ -1306,7 +1401,7 @@ a {
   }
   .hero-home .hero-container {
     width: 95%;
-    padding: 50% 0;
+    padding: 35% 0;
   }
   .hero-home .social-icon {
     display: none;
@@ -1337,13 +1432,16 @@ a {
   .footer .footer-container {
     width: 85%;
   }
-  .footer .all-link .col-2 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .footer .footer-bottom, 
-  .footer .footer-bottom .social-icon {
+  .footer .social-icon {
     text-align: center;
+  }
+  .footer .footer-each {
+    margin-bottom: .5rem;
+  }
+
+  /* search bar */
+  .navigation-with-search .show-on-sml {
+    right: 10%;
   }
 
   /* single restaurant */
@@ -1396,16 +1494,33 @@ a {
     text-align: center;
     margin: 0;
   }
+
+  /* offer */
+  .current-offer-heading {
+    padding: 8rem 0 6rem !important;
+    font-size: 24px !important;
+  }
+  .offer-item .offer-item-container {
+    width: 85%;
+  }
+  .offer-item .img-part {
+    padding: 0;
+  }
 }
 
 @media (max-width: 360px) {
   /* home */
   .hero-home .hero-container {
-    padding: 40% 0;
+    padding: 35% 0;
   }
   .hero-home h1 {
     font-size: 30px;
     margin-left: 0;
+  }
+
+  /* search bar */
+  .navigation-with-search .show-on-sml {
+    right: 12%;
   }
 
   /* single restaurant */
